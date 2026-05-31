@@ -20,10 +20,6 @@ app.use(cors());
 
 app.use(notesRoutes);
 
-app.get('/test-error', (req, res, next) => {
-  next(new Error('Something went wrong'));
-});
-
 app.use(notFoundHandler);
 
 app.use(errorHandler);
